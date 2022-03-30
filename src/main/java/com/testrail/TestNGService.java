@@ -14,20 +14,39 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author amuthansakthivel
+ * @version 1.0
+ */
 public class TestNGService {
 
     private TestRailApiClient testRailApiClient;
     private TestRailService testRailService;
 
+    /**
+     * default constructor used to pick data from test rail properties
+     */
     public TestNGService(){
         this.testRailApiClient = TestRailConfigFactory.getTestRailClient();
         this.testRailService = new TestRailService(testRailApiClient);
     }
+
+    /**
+     * Used when user creates and pass the testRailApiClient
+     * @param testRailApiClient
+     */
     public TestNGService(TestRailApiClient testRailApiClient){
         this.testRailApiClient = testRailApiClient;
         this.testRailService = new TestRailService(testRailApiClient);
     }
 
+    /**
+     *
+     * @param suite
+     * @param testRunNameToBeCreated
+     * @param testRailSuiteId
+     * @return current class instance
+     */
     public TestNGService addTestRun(ISuite suite, String testRunNameToBeCreated, int testRailSuiteId){
         TestRun testRun =
                 TestRun.builder()
@@ -41,6 +60,14 @@ public class TestNGService {
         return this;
     }
 
+    /**
+     *
+     * @param suite
+     * @param testRunNameToBeCreated
+     * @param testRailSuiteId
+     * @param testRunToBeUpdated
+     * @return current class instance
+     */
     public TestNGService updateTestRun(ISuite suite, String testRunNameToBeCreated, int testRailSuiteId,
     int testRunToBeUpdated){
         TestRun testRun =
@@ -55,6 +82,14 @@ public class TestNGService {
         return this;
     }
 
+    /**
+     *
+     * @param suite
+     * @param testRunNameToBeCreated
+     * @param testRailSuiteId
+     * @param testRunNameToBeUpdated
+     * @return current class instance
+     */
     public TestNGService updateTestRun(ISuite suite, String testRunNameToBeCreated, int testRailSuiteId,
                                        String testRunNameToBeUpdated){
         TestRun testRun =
@@ -69,6 +104,10 @@ public class TestNGService {
         return this;
     }
 
+    /**
+     * @param suite
+     * @return current class instance
+     */
     public TestNGService addResultsToCases(ISuite suite){
         List<Result> list = suite
                 .getAllInvokedMethods()
@@ -81,6 +120,9 @@ public class TestNGService {
         return this;
     }
 
+    /**
+     * @param htmlFileToAttach
+     */
     public void addAttachmentToTestRun(File htmlFileToAttach){
         testRailService.addAttachmentToTestRun(htmlFileToAttach);
     }

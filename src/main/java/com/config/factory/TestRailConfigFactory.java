@@ -4,14 +4,24 @@ import com.config.TestRailConfig;
 import com.testrail.TestRailApiClient;
 import org.aeonbits.owner.ConfigCache;
 
+/**
+ * @author amuthansakthivel
+ * @version 1.0
+ */
 public final class TestRailConfigFactory {
 
     private TestRailConfigFactory(){}
 
-    public static TestRailConfig getConfig(){
+    /**
+     * @return TestRailConfig
+     */
+    private static TestRailConfig getConfig(){
         return ConfigCache.getOrCreate(TestRailConfig.class);
     }
 
+    /**
+     * @return TestRailApiClient needed to perform api calls to test rail
+     */
     public static TestRailApiClient getTestRailClient(){
         return TestRailApiClient
                 .builder()

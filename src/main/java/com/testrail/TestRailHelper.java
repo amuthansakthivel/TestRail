@@ -17,10 +17,17 @@ import java.io.File;
 
 import static kong.unirest.Unirest.post;
 
+/**
+ * @author amuthansakthivel
+ * @version 1.0
+ */
 public class TestRailHelper {
 
     private TestRailApiClient testRailApiClient;
 
+    /**
+     * @param testRailApiClient
+     */
     public TestRailHelper(TestRailApiClient testRailApiClient){
         this.testRailApiClient = testRailApiClient;
         setUnirestConfig();
@@ -108,7 +115,6 @@ public class TestRailHelper {
 
     private int getTestRunIdForTestRunName(String testRunName, int projectID){
         JSONArray jsonArray = Unirest.get("get_runs/" + projectID).asJson().getBody().getArray();
-
 
         for (int i = 0; i < jsonArray.length(); i++) {
             if (jsonArray.getJSONObject(i).getString("name").equalsIgnoreCase(testRunName)) {

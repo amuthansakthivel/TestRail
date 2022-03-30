@@ -9,6 +9,10 @@ import lombok.extern.jackson.Jacksonized;
 
 import java.util.List;
 
+/**
+ * @author amuthansakthivel
+ * @version 1.0
+ */
 @Jacksonized
 @Builder(setterPrefix = "set")
 @ToString

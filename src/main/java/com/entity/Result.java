@@ -6,6 +6,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.ToString;
 import lombok.extern.jackson.Jacksonized;
 
+/**
+ * @author amuthansakthivel
+ * @version 1.0
+ */
 @Jacksonized
 @ToString
 @JsonInclude(value = JsonInclude.Include.NON_DEFAULT)
