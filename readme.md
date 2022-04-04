@@ -12,7 +12,7 @@ _Usage 1 : Defining your testrail information in property file_
 
 1. Add a testrail.properties to your project's resources folder(src/test/resources or src/main/resources)
 2. Define all the meta information about your testrail.
-       ![img_1.png](readme-images/img_1.png)
+       ![img_1.png](readme-images/img1.png)
 
 _Usage 2 : Creating an instance of Test Rail Api Client using Builder pattern_
 
@@ -36,7 +36,7 @@ _Usage 3 : Passing it as system or environment variables_
 
 3. When we were using this api client in TestNG based frameworks it will be very easy to plug and use.
 
-![img_3.png](readme-images/img_6.png)
+![img_3.png](readme-images/img6.png)
 
 Note : TestNGService class have overloaded constructor to pass the TestRailApiClient instance
 
