@@ -13,7 +13,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.12</version>
+                <version>1.6.9</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
@@ -100,13 +100,13 @@
 
     <scm>
         <connection>scm:git:git://github.com/amuthansakthivel/TestRail.git</connection>
-        <developerConnection>scm:git:ssh://github.com/amuthansakthivel/TestRail.git</developerConnection>
+        <developerConnection>scm:git:ssh://github.com:amuthansakthivel/TestRail.git</developerConnection>
         <url>http://github.com/amuthansakthivel/TestRail</url>
     </scm>
 
     <developers>
         <developer>
-            <name>amuthan sakthivel</name>
+            <name>amuthansakthivel</name>
             <email>mech.amuthansakthivel@gmail.com</email>
             <organization>com.github.amuthansakthivel</organization>
             <organizationUrl>http://github.com/amuthansakthivel</organizationUrl>
