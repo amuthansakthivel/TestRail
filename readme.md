@@ -5,8 +5,10 @@ This project contains easy to use code to integrate the Java Test Automation pro
 **How to use this library?**
 
 1. Add the dependencies to the project
+2. 
+   [Maven Central](https://mvnrepository.com/artifact/io.github.amuthansakthivel/cbh-testrail)
    ![img.png](readme-images/img.png)
-2. Create a Test Rail Api Client
+3. Create a Test Rail Api Client
 
 _Usage 1 : Defining your testrail information in property file_ 
 
